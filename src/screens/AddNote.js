@@ -77,12 +77,12 @@ export default class AddNote extends Component {
 						this.setState({selectedCategory: itemValue})
 					}>
 					{
-						this.state.category.map((item) => {
-							return(
-								<Picker.item label={item.category_name} value={item.category_name} />
-							)
-						})
-					}
+					  	this.state.category.map((item) => {
+					  		return(
+					  			<Picker.Item key={item.id} label={item.category_name} value={item.id} />
+					  		)
+					  	})
+					  }
 				</Picker>
 				<View style={{height: 100}} />
 			</ScrollView>
